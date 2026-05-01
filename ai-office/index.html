@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galenite — AI Office</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise"></div>
+
+  <header class="topbar">
+    <div class="topbar__brand">GALENITE / AI OFFICE</div>
+    <div class="topbar__line"></div>
+  </header>
+
+  <main>
+    <section class="screen hero-screen" id="hero">
+      <div class="hero-shell reveal">
+        <div class="eyebrow">Galenite product system</div>
+        <h1>AI OFFICE</h1>
+        <p>
+          Визуальный интерфейс для ИИ-команды: роли, задачи, маршруты,
+          статусы и единая точка управления.
+        </p>
+      </div>
+
+      <div class="hero-video-peek" aria-hidden="true">
+        <div class="hero-video-peek__crop">
+          <div class="hero-video-peek__card">
+            <video class="hero-video-peek__video" autoplay muted loop playsinline preload="auto" poster="assets/office-plan.png">
+              <source src="assets/office-loop.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </div>
+      <div class="hero-rings" aria-hidden="true"></div>
+    </section>
+
+    <section class="screen office-screen" id="office">
+      <div class="office-stage reveal">
+        <div class="office-card video-card" id="officeCard">
+          <div class="video-frame">
+            <video class="office-video" autoplay muted loop playsinline preload="auto" poster="assets/office-plan.png">
+              <source src="assets/office-loop.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section showcase-section">
+      <div class="section-wrap reveal">
+        <div class="section-head section-head--compact">
+          <div>
+            <div class="eyebrow">Inside the product</div>
+            <h2>Не текст про офис. Сам офис.</h2>
+          </div>
+          <p>Ниже не список фич, а наглядная модель того, как AI Office собирает роли, задачи и контроль в одну живую систему.</p>
+        </div>
+
+        <div class="showcase-grid">
+          <article class="bento-card bento-card--hero">
+            <div class="card-topline">
+              <span>Control layer</span>
+              <span>Live state</span>
+            </div>
+            <div class="console-window">
+              <div class="console-sidebar">
+                <div class="sidebar-pill active">Coordinator</div>
+                <div class="sidebar-pill">Marketing</div>
+                <div class="sidebar-pill">Design</div>
+                <div class="sidebar-pill">Legal</div>
+              </div>
+              <div class="console-main">
+                <div class="console-row console-row--header">
+                  <span>Task routing</span>
+                  <span>4 active</span>
+                </div>
+                <div class="console-task-list">
+                  <div class="task-item">
+                    <div>
+                      <strong>New request</strong>
+                      <span>Inbound brief → coordinator</span>
+                    </div>
+                    <em>queued</em>
+                  </div>
+                  <div class="task-item">
+                    <div>
+                      <strong>Landing page update</strong>
+                      <span>Coordinator → design</span>
+                    </div>
+                    <em>in work</em>
+                  </div>
+                  <div class="task-item">
+                    <div>
+                      <strong>Offer refinement</strong>
+                      <span>Coordinator → marketing</span>
+                    </div>
+                    <em>review</em>
+                  </div>
+                </div>
+                <div class="console-statusbar">
+                  <span>Roles synced</span>
+                  <span>Routes active</span>
+                  <span>Owner online</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="bento-card stat-card">
+            <div class="card-topline"><span>Roles</span><span>01</span></div>
+            <div class="big-stat">08</div>
+            <p>Подключаемые сотрудники внутри одного интерфейса.</p>
+          </article>
+
+          <article class="bento-card stat-card">
+            <div class="card-topline"><span>State</span><span>02</span></div>
+            <div class="signal-stack">
+              <span class="signal-pill active">active</span>
+              <span class="signal-pill">queued</span>
+              <span class="signal-pill">review</span>
+            </div>
+            <p>Статусы понятны с первого взгляда, без тяжелой админки.</p>
+          </article>
+
+          <article class="bento-card routes-card">
+            <div class="card-topline"><span>Routing map</span><span>03</span></div>
+            <div class="route-map">
+              <div class="route-node route-node--center">owner</div>
+              <div class="route-node route-node--a">marketing</div>
+              <div class="route-node route-node--b">design</div>
+              <div class="route-node route-node--c">legal</div>
+              <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M50 50 C60 34, 74 28, 82 20"/>
+                <path d="M50 50 C66 50, 78 50, 88 50"/>
+                <path d="M50 50 C60 66, 74 72, 82 80"/>
+              </svg>
+            </div>
+          </article>
+
+          <article class="bento-card glass-card">
+            <div class="card-topline"><span>Output</span><span>04</span></div>
+            <div class="mini-docs">
+              <div class="mini-doc"></div>
+              <div class="mini-doc"></div>
+              <div class="mini-doc"></div>
+            </div>
+            <p>Задачи превращаются в результат, а не просто в ответы в чате.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section process-section">
+      <div class="section-wrap reveal">
+        <div class="section-head section-head--split">
+          <div>
+            <div class="eyebrow">Workflow</div>
+            <h2>Как проходит работа</h2>
+          </div>
+          <p>AI Office выглядит как продукт не тогда, когда много обещает, а когда показывает понятный путь от входящего запроса до готового результата.</p>
+        </div>
+
+        <div class="process-rail">
+          <article class="process-card">
+            <span class="process-index">01</span>
+            <h3>Запрос попадает в офис</h3>
+            <p>Входящее сообщение, задача или бриф сначала попадает в координационный слой.</p>
+            <div class="process-visual process-visual--inbox">
+              <div class="pv-window"></div>
+              <div class="pv-line short"></div>
+              <div class="pv-line"></div>
+            </div>
+          </article>
+
+          <article class="process-card process-card--featured">
+            <span class="process-index">02</span>
+            <h3>Система назначает роль и маршрут</h3>
+            <p>Задача уходит не в общий хаос, а по нужному сценарию: кто выполняет, кто проверяет, кто возвращает итог.</p>
+            <div class="process-visual process-visual--route">
+              <div class="pv-orbit pv-orbit--core"></div>
+              <div class="pv-orbit pv-orbit--one"></div>
+              <div class="pv-orbit pv-orbit--two"></div>
+              <div class="pv-dot pv-dot--one"></div>
+              <div class="pv-dot pv-dot--two"></div>
+              <div class="pv-dot pv-dot--three"></div>
+            </div>
+          </article>
+
+          <article class="process-card">
+            <span class="process-index">03</span>
+            <h3>Владелец видит статус и итог</h3>
+            <p>Не нужно разбирать логи. Система показывает прогресс, занятость и готовый выход.</p>
+            <div class="process-visual process-visual--output">
+              <div class="pv-sheet large"></div>
+              <div class="pv-sheet small"></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section staff-section">
+      <div class="section-wrap reveal">
+        <div class="section-head section-head--compact">
+          <div>
+            <div class="eyebrow">AI staff</div>
+            <h2>Состав команды под задачу</h2>
+          </div>
+          <p>Можно стартовать с малого состава, а можно собрать полноценный цифровой офис под отделы, поддержку и внутренние процессы.</p>
+        </div>
+
+        <div class="staff-layout">
+          <article class="staff-board">
+            <div class="staff-core">coordinator</div>
+            <div class="staff-node staff-node--1">marketing</div>
+            <div class="staff-node staff-node--2">design</div>
+            <div class="staff-node staff-node--3">sales</div>
+            <div class="staff-node staff-node--4">legal</div>
+            <div class="staff-node staff-node--5">support</div>
+            <div class="staff-node staff-node--6">tech</div>
+          </article>
+
+          <div class="staff-packs">
+            <article class="staff-pack">
+              <div class="card-topline"><span>Starter office</span><span>Base</span></div>
+              <div class="pack-tags">
+                <span>Coordinator</span>
+                <span>Marketing</span>
+                <span>Design</span>
+              </div>
+              <p>Для упаковки, контента, лендингов и ежедневной координации.</p>
+            </article>
+
+            <article class="staff-pack">
+              <div class="card-topline"><span>Extended office</span><span>Scale</span></div>
+              <div class="pack-tags">
+                <span>Sales</span>
+                <span>Legal</span>
+                <span>Support</span>
+                <span>Tech</span>
+              </div>
+              <p>Когда офис начинает работать не как демо, а как операционный слой бизнеса.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section rollout-section">
+      <div class="section-wrap reveal">
+        <div class="section-head section-head--split">
+          <div>
+            <div class="eyebrow">Rollout</div>
+            <h2>MVP уже собран. Дальше — внедрение.</h2>
+          </div>
+          <p>Сейчас продукт уже показывает интерфейс, роли, маршруты и динамику. Следующий слой — подключение интеграций, сценариев и реальной нагрузки на пилотах.</p>
+        </div>
+
+        <div class="rollout-grid">
+          <article class="rollout-panel">
+            <div class="rollout-label">Now</div>
+            <ul>
+              <li>живой офис как интерфейс</li>
+              <li>роли и статусы сотрудников</li>
+              <li>визуальная демонстрация маршрутов</li>
+              <li>презентационный MVP для первых запусков</li>
+            </ul>
+          </article>
+          <article class="rollout-panel rollout-panel--accent">
+            <div class="rollout-label">Next</div>
+            <ul>
+              <li>пилот на реальном бизнесе</li>
+              <li>интеграции и API-слой</li>
+              <li>глубокие сценарии автоматизации</li>
+              <li>масштабируемая подписка по составу офиса</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
