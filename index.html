@@ -1,15 +1,58 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Galenite</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script type="module" src="/src/main.jsx"></script>
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galenite</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="background-glow"></div>
+
+  <div class="page">
+    <header class="navbar">
+      <a class="logo" href="/">GALENITE</a>
+
+      <nav>
+        <a href="/ai-office">AI Office</a>
+        <a href="/products">Products</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <div class="badge">
+        AI SYSTEMS · DESIGN · INFRASTRUCTURE
+      </div>
+
+      <h1>
+        Building AI products
+        <br />
+        for the new digital era.
+      </h1>
+
+      <p>
+        Minimal ecosystem focused on intelligent interfaces,
+        automation and digital infrastructure.
+      </p>
+
+      <div class="actions">
+        <a class="primary-button" href="/ai-office">
+          Explore AI Office
+        </a>
+
+        <a class="secondary-button" href="/products">
+          View products
+        </a>
+      </div>
+    </main>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
 </html>
