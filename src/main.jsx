@@ -1,62 +1,39 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { ArrowUpRight } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { createRoot } from 'react-dom/client';
 import './styles.css';
 
 function App() {
   return (
-    <div className="page minimal-page">
-      <header className="navbar minimal-navbar">
-        <div className="logo">GALENITE</div>
-
-        <nav>
-          <a href="#">Products</a>
-          <a href="#">Technology</a>
-          <a href="#">Contact</a>
+    <div className="site-shell">
+      <header className="site-header">
+        <a className="brand" href="/">GALENITE</a>
+        <nav className="nav">
+          <a href="/ai-office">AI Office</a>
+          <a href="/products">Products</a>
+          <a href="/contact">Contact</a>
         </nav>
       </header>
 
-      <main className="minimal-main">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="minimal-hero"
-        >
-          <span className="minimal-badge">
-            AI SYSTEMS · DESIGN · INFRASTRUCTURE
-          </span>
+      <main className="main-hero">
+        <p className="eyebrow">AI SYSTEMS · DESIGN · INFRASTRUCTURE</p>
 
-          <h1>
-            Building the next
-            <br />
-            generation of AI
-            <br />
-            products.
-          </h1>
+        <h1>
+          Building AI products
+          <br />
+          for the new digital era.
+        </h1>
 
-          <p>
-            Minimal ecosystem focused on AI interfaces,
-            automation and digital infrastructure.
-          </p>
+        <p className="hero-text">
+          Galenite creates minimal, intelligent interfaces and automation systems for business.
+        </p>
 
-          <div className="hero-actions">
-            <button>
-              Explore
-              <ArrowUpRight size={18} />
-            </button>
-
-            <a href="#">View projects</a>
-          </div>
-        </motion.div>
+        <div className="actions">
+          <a className="primary-link" href="/ai-office">Explore AI Office</a>
+          <a className="secondary-link" href="/products">View products</a>
+        </div>
       </main>
     </div>
   );
 }
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+createRoot(document.getElementById('root')).render(<App />);
