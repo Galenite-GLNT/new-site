@@ -12,13 +12,37 @@ function setHint(text = '') {
   if (hint) hint.textContent = text;
 }
 
+function getReturnUrl() {
+  const params = new URLSearchParams(window.location.search);
+  const fromQuery = params.get('return') || params.get('next');
+
+  if (fromQuery && fromQuery.startsWith('/')) {
+    sessionStorage.setItem('glnt_auth_return', fromQuery);
+    return fromQuery;
+  }
+
+  const saved = sessionStorage.getItem('glnt_auth_return');
+  if (saved && saved.startsWith('/')) return saved;
+
+  try {
+    const ref = document.referrer ? new URL(document.referrer) : null;
+    if (ref && ref.origin === window.location.origin && !ref.pathname.startsWith('/auth')) {
+      return ref.pathname + ref.search + ref.hash;
+    }
+  } catch {}
+
+  return '/';
+}
+
 function saveUser(user) {
   localStorage.setItem('glnt_user', JSON.stringify(user));
   localStorage.setItem('glnt_logged_in', 'true');
 }
 
 function redirectAfterLogin() {
-  window.location.href = '/galen/';
+  const target = getReturnUrl();
+  sessionStorage.removeItem('glnt_auth_return');
+  window.location.href = target;
 }
 
 function renderWidget() {
@@ -77,4 +101,5 @@ if (demoLogin) {
   };
 }
 
+getReturnUrl();
 renderWidget();
