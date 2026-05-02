@@ -1,8 +1,7 @@
-import { apiFetch } from '/shared/config.js?v=20260306_5';
-import { getQueryParam } from '/shared/utils.js?v=20260306_5';
-
 const widget = document.getElementById('telegramWidget');
 const hint = document.getElementById('hint');
+const demoLogin = document.getElementById('demoLogin');
+
 const TELEGRAM_BOT_USERNAME = 'glnt_auth_bot';
 
 requestAnimationFrame(() => {
@@ -13,63 +12,69 @@ function setHint(text = '') {
   if (hint) hint.textContent = text;
 }
 
-function redirectToTarget() {
-  const returnTo = getQueryParam('return') || '/health/';
-  window.location.href = returnTo;
+function saveUser(user) {
+  localStorage.setItem('glnt_user', JSON.stringify(user));
+  localStorage.setItem('glnt_logged_in', 'true');
+}
+
+function redirectAfterLogin() {
+  window.location.href = '/galen/';
 }
 
 function renderWidget() {
   if (!widget) return;
-  widget.innerHTML = '';
+
   const script = document.createElement('script');
+
   script.async = true;
   script.src = 'https://telegram.org/js/telegram-widget.js?22';
+
   script.setAttribute('data-telegram-login', TELEGRAM_BOT_USERNAME);
   script.setAttribute('data-size', 'large');
+  script.setAttribute('data-radius', '14');
   script.setAttribute('data-userpic', 'false');
   script.setAttribute('data-request-access', 'write');
+  script.setAttribute('data-lang', 'ru');
   script.setAttribute('data-onauth', 'onTelegramAuth(user)');
+
   widget.appendChild(script);
 }
 
-window.onTelegramAuth = async function onTelegramAuth(user) {
+window.onTelegramAuth = async function(user) {
   try {
-    const response = await apiFetch('/api/auth/telegram', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(user || {}),
+    setHint('Авторизация...');
+
+    saveUser({
+      id: user.id,
+      first_name: user.first_name,
+      username: user.username,
+      photo_url: user.photo_url,
+      auth_date: user.auth_date
     });
 
-    if (!response.ok) {
-      setHint(`Не удалось авторизоваться через Telegram (${response.status}).`);
-      return;
-    }
+    setHint('Успешный вход через Telegram.');
 
-    const payload = await response.json().catch(() => ({}));
-    if (payload.session_id) {
-      localStorage.setItem('glnt_session_id', payload.session_id);
-    }
+    setTimeout(() => {
+      redirectAfterLogin();
+    }, 500);
 
-    redirectToTarget();
   } catch (error) {
     console.error(error);
-    setHint('Ошибка сети при авторизации Telegram.');
+    setHint('Ошибка авторизации Telegram.');
   }
 };
 
-async function init() {
-  renderWidget();
+if (demoLogin) {
+  demoLogin.onclick = () => {
+    saveUser({
+      id: 'demo',
+      first_name: 'Илья',
+      username: 'qrayyt',
+      role: 'CEO'
+    });
 
-  try {
-    const meResponse = await apiFetch('/api/auth/me', { method: 'GET' });
-    if (meResponse.ok) {
-      redirectToTarget();
-    }
-  } catch {
-    setHint('API временно недоступен. Попробуйте снова.');
-  }
+    redirectAfterLogin();
+  };
 }
 
-init();
+renderWidget();
