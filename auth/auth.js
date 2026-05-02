@@ -1,6 +1,5 @@
 const widget = document.getElementById('telegramWidget');
 const hint = document.getElementById('hint');
-const demoLogin = document.getElementById('demoLogin');
 
 const TELEGRAM_BOT_USERNAME = 'glnt_auth_bot';
 
@@ -87,19 +86,6 @@ window.onTelegramAuth = async function(user) {
     setHint('Ошибка авторизации Telegram.');
   }
 };
-
-if (demoLogin) {
-  demoLogin.onclick = () => {
-    saveUser({
-      id: 'demo',
-      first_name: 'Илья',
-      username: 'qrayyt',
-      role: 'CEO'
-    });
-
-    redirectAfterLogin();
-  };
-}
 
 getReturnUrl();
 renderWidget();
