@@ -3,10 +3,10 @@ const hint = document.getElementById('hint');
 const sticker = document.getElementById('authSticker');
 
 const TELEGRAM_BOT_USERNAME = 'glnt_auth_bot';
-const API_ORIGIN = 'https://api.galenite.ru';
+const API_ORIGIN = 'https://api.galenite.org';
 const ALLOWED_RETURN_ORIGINS = new Set([
   window.location.origin,
-  'https://operator.galenite.ru',
+  'https://operator.galenite.org',
 ]);
 
 requestAnimationFrame(() => {
