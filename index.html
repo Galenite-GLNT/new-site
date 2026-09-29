@@ -7,17 +7,18 @@
 <meta name="description" content="Galenite создаёт цифровые продукты и интеллектуальные системы.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css?v=20260929-5">
+<link rel="stylesheet" href="/style.css?v=20260929-6">
 </head>
 <body>
 <header class="topbar">
 <a class="brand" href="/"><img src="/assets/galenite-mark.svg" alt=""><span>GALENITE</span></a>
 <nav><a href="#operator">OPERATOR</a><a href="/contact/">CONTACT</a></nav>
 </header>
+
 <main>
 <section class="hero">
 <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
-<div class="hero-center">
+<div class="hero-center reveal hero-parallax">
 <img class="hero-mark" src="/assets/galenite-mark.svg" alt="Galenite">
 <h1>GALENITE</h1>
 <p>МЕНЬШЕ ИСКУССТВЕННОГО.<br>БОЛЬШЕ ИНТЕЛЛЕКТА.</p>
@@ -27,19 +28,21 @@
 </section>
 
 <section class="operator" id="operator">
-<div class="section-label"><span>01</span><span>GALENITE / OPERATOR</span><span>LIVE PRODUCT</span></div>
+<div class="section-label reveal"><span>01</span><span>GALENITE / OPERATOR</span><span>LIVE PRODUCT</span></div>
 <div class="operator-intro">
-<div><span class="eyebrow">INTELLIGENCE FOR BUSINESS</span><h2>OPERATOR</h2></div>
-<p>ИИ-оператор, который работает с контекстом вашего бизнеса и собственной базой знаний.</p>
+<div class="reveal"><span class="eyebrow">INTELLIGENCE FOR BUSINESS</span><h2>OPERATOR</h2></div>
+<p class="reveal">ИИ-оператор, который работает с контекстом вашего бизнеса и собственной базой знаний.</p>
 </div>
-<div class="product-stage">
+
+<div class="product-stage reveal" id="productStage">
+<div class="stage-grid"></div>
 <div class="soft-glow"></div>
-<div class="product-window">
+<div class="product-window" id="productWindow">
 <div class="window-head"><div class="window-brand"><img src="/assets/galenite-mark.svg" alt=""><span>OPERATOR</span></div><span class="online"><i></i> ONLINE</span></div>
 <div class="window-body">
 <aside><b>Operator</b><span class="active">Диалоги</span><span>База знаний</span><span>Настройки</span><small>GALENITE</small></aside>
 <div class="conversation">
-<div class="conversation-top"><div><small>ДИАЛОГ</small><strong>Новый запрос</strong></div><button>•••</button></div>
+<div class="conversation-top"><div><small>ДИАЛОГ</small><strong>Новый запрос</strong></div><button type="button" aria-label="Меню">•••</button></div>
 <div class="messages">
 <div class="bubble user">Расскажи клиенту главное о нашем продукте.</div>
 <div class="answer"><div class="answer-mark"><img src="/assets/galenite-mark.svg" alt=""></div><div><strong>Operator</strong><p>Соберу ответ на основе информации из подключённой базы знаний.</p><div class="textline"></div><div class="textline"></div><div class="textline short"></div></div></div>
@@ -48,29 +51,95 @@
 </div>
 </div>
 </div>
+
+<div class="stage-caption"><span>MOVE CURSOR</span><span>LIVE INTERFACE</span></div>
 </div>
 </section>
 
 <section class="about-operator">
-<div class="section-label"><span>02</span><span>HOW IT WORKS</span><span>ONE SYSTEM</span></div>
+<div class="section-label reveal"><span>02</span><span>HOW IT WORKS</span><span>ONE SYSTEM</span></div>
 <div class="about-grid">
-<div class="about-copy"><span class="eyebrow">НЕ ПРОСТО ЧАТ</span><h2>Контекст<br>остаётся<br>внутри.</h2></div>
+<div class="about-copy reveal"><span class="eyebrow">НЕ ПРОСТО ЧАТ</span><h2>Контекст<br>остаётся<br>внутри.</h2></div>
 <div class="principles">
-<article><span>01</span><h3>Знает продукты</h3><p>Operator использует подключённую базу знаний и опирается на информацию компании.</p></article>
-<article><span>02</span><h3>Ведёт диалоги</h3><p>Рабочие разговоры остаются в одном интерфейсе и доступны для продолжения.</p></article>
-<article><span>03</span><h3>Помогает работать</h3><p>Интеллект встроен в процесс и помогает получать результат без лишнего интерфейсного шума.</p></article>
+<article class="reveal"><span>01</span><h3>Знает продукты</h3><p>Operator использует подключённую базу знаний и опирается на информацию компании.</p></article>
+<article class="reveal"><span>02</span><h3>Ведёт диалоги</h3><p>Рабочие разговоры остаются в одном интерфейсе и доступны для продолжения.</p></article>
+<article class="reveal"><span>03</span><h3>Помогает работать</h3><p>Интеллект встроен в процесс и помогает получать результат без лишнего интерфейсного шума.</p></article>
 </div>
 </div>
 </section>
 
-<section class="operator-end">
-<div class="end-card">
-<img src="/assets/galenite-mark.svg" alt="">
-<span>GALENITE / OPERATOR</span>
-<h2>Один оператор.<br>Контекст бизнеса внутри.</h2>
+<section class="dark-system" id="darkSystem">
+<div class="dark-glow" id="darkGlow"></div>
+<div class="dark-top reveal"><span>03 / OPERATOR</span><span>KNOWLEDGE INSIDE</span></div>
+<div class="dark-layout">
+<div class="dark-copy reveal">
+<span class="eyebrow">ONE SYSTEM</span>
+<h2>Не отдельный AI.<br>Часть работы.</h2>
+<p>База знаний, контекст и диалоги соединены в одном продукте. Operator не висит поверх процесса — он находится внутри него.</p>
 <a href="https://operator.galenite.org">ОТКРЫТЬ OPERATOR <b>↗</b></a>
 </div>
+<div class="dark-visual reveal">
+<img class="dark-mark" src="/assets/galenite-mark.svg" alt="">
+<div class="signal s1"><span>01</span><b>KNOWLEDGE</b></div>
+<div class="signal s2"><span>02</span><b>CONTEXT</b></div>
+<div class="signal s3"><span>03</span><b>DIALOGUE</b></div>
+<div class="signal s4"><span>04</span><b>RESULT</b></div>
+<div class="dark-panel">
+<div class="dark-panel-head"><span>OPERATOR / SYSTEM</span><span>ACTIVE</span></div>
+<div class="dark-panel-body"><i></i><i></i><i></i><i class="short"></i></div>
+</div>
+</div>
+</div>
 </section>
-<footer><a class="brand" href="/"><img src="/assets/galenite-mark.svg" alt=""><span>GALENITE</span></a><span>© 2026</span><a href="/contact/">CONTACT ↗</a></footer>
+
+<footer>
+<a class="brand" href="/"><img src="/assets/galenite-mark.svg" alt=""><span>GALENITE</span></a>
+<span>© 2026</span>
+<a href="/contact/">CONTACT ↗</a>
+</footer>
 </main>
+
+<script>
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(!reduce){
+  const io=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('is-visible'); io.unobserve(e.target); }});
+  },{threshold:.14});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  const hero=document.querySelector('.hero');
+  const heroP=document.querySelector('.hero-parallax');
+  if(hero&&heroP&&matchMedia('(pointer:fine)').matches){
+    hero.addEventListener('pointermove',e=>{
+      const r=hero.getBoundingClientRect();
+      const x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
+      heroP.style.transform=`translate3d(${x*8}px,${y*8}px,0)`;
+    });
+    hero.addEventListener('pointerleave',()=>heroP.style.transform='translate3d(0,0,0)');
+  }
+
+  const stage=document.getElementById('productStage');
+  const win=document.getElementById('productWindow');
+  if(stage&&win&&matchMedia('(pointer:fine)').matches){
+    stage.addEventListener('pointermove',e=>{
+      const r=stage.getBoundingClientRect();
+      const x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
+      win.style.transform=`perspective(1200px) rotateX(${-y*2.4}deg) rotateY(${x*3.2}deg) translate3d(${x*6}px,${y*6}px,0)`;
+    });
+    stage.addEventListener('pointerleave',()=>win.style.transform='perspective(1200px) rotateX(0) rotateY(0) translate3d(0,0,0)');
+  }
+
+  const dark=document.getElementById('darkSystem');
+  const glow=document.getElementById('darkGlow');
+  if(dark&&glow&&matchMedia('(pointer:fine)').matches){
+    dark.addEventListener('pointermove',e=>{
+      const r=dark.getBoundingClientRect();
+      glow.style.left=(e.clientX-r.left)+'px';
+      glow.style.top=(e.clientY-r.top)+'px';
+    });
+  }
+}else{
+  document.querySelectorAll('.reveal').forEach(el=>el.classList.add('is-visible'));
+}
+</script>
 </body></html>
