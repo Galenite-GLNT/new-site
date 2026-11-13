@@ -1,51 +1,148 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Galenite</title>
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#191423">
+  <meta name="description" content="Galenite — цифровые продукты, AI-инструменты и инфраструктура для работы.">
+  <title>Galenite — VI Edition</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="./style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css?v=vice-2026-1">
+  <script src="/vice.js?v=vice-2026-1" defer></script>
 </head>
 <body>
-  <div class="background-glow"></div>
-
-  <div class="page">
-    <header class="navbar">
-      <a class="logo" href="/">GALENITE</a>
-
-      <nav>
-        <a href="/ai-office">AI Office</a>
-        <a href="/products">Products</a>
-        <a href="/contact">Contact</a>
-      </nav>
-    </header>
-
-    <main class="hero">
-      <h1>
-        BEYOND ARTIFICIAL
-        <br />
-        INTO INTELLIGENCE
-      </h1>
-
-      <p>
-        AI systems, infrastructure and digital products by Galenite.
-      </p>
-
-      <div class="actions">
-        <a class="primary-button" href="/ai-office">
-          Explore AI Office
-        </a>
-
-        <a class="secondary-button" href="/products">
-          View products
-        </a>
+  <div class="intro" id="intro" role="presentation" aria-hidden="true">
+    <div class="intro__stage">
+      <div class="intro__mosaic">
+        <i class="intro__tile intro__tile--1"></i>
+        <i class="intro__tile intro__tile--2"></i>
+        <i class="intro__tile intro__tile--3"></i>
+        <i class="intro__tile intro__tile--4"></i>
+        <i class="intro__tile intro__tile--5"></i>
+        <i class="intro__tile intro__tile--6"></i>
+        <i class="intro__tile intro__tile--7"></i>
+        <i class="intro__tile intro__tile--8"></i>
+        <i class="intro__tile intro__tile--9"></i>
+        <span class="intro__vi">VI</span>
+        <img class="intro__mark" src="/assets/vi/mark.webp" onerror="this.onerror=null;this.src='/assets/vi/mark.svg'" alt="">
       </div>
-    </main>
+      <p class="intro__name">GALENITE <span>VI EDITION</span></p>
+    </div>
+    <button class="intro__skip" type="button" id="skip-intro">Пропустить</button>
   </div>
+
+  <header class="header" id="site-header">
+    <div class="header__inner">
+      <a href="/" class="header__brand" aria-label="Galenite — главная">
+        <img src="/assets/vi/mark.webp" onerror="this.onerror=null;this.src='/assets/vi/mark.svg'" alt="">
+        <span>GALENITE</span>
+        <em>VI EDITION</em>
+      </a>
+      <nav class="header__nav" id="main-nav" aria-label="Основное меню">
+        <a href="#about">О компании</a>
+        <a href="#featured">AI Office</a>
+        <a href="#ecosystem">Продукты</a>
+        <a href="/contact/">Контакты</a>
+      </nav>
+      <a class="header__action" href="/products/">Продукты <span aria-hidden="true">↗</span></a>
+      <button class="header__menu" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="hero__photo"></div>
+      <div class="hero__shade"></div>
+      <div class="hero__content container">
+        <p class="eyebrow hero__eyebrow">GALENITE / LIMITED WEBSITE EDITION / 2026</p>
+        <div class="hero__identity">
+          <span class="hero__wordmark">GALENITE</span>
+          <div class="hero__second-line"><span class="hero__roman">VI</span><span class="hero__edition">Edition</span></div>
+        </div>
+        <p class="hero__description">AI-инструменты, рабочие пространства и инфраструктура для команд и бизнеса.</p>
+        <div class="hero__buttons">
+          <a href="/products/" class="cta cta--light">Смотреть продукты <span aria-hidden="true">↗</span></a>
+          <a href="#about" class="cta cta--transparent">О Galenite <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#about" aria-label="Прокрутить к информации о Galenite"><span>SCROLL TO EXPLORE</span><i></i></a>
+      <span class="hero__edge">01 / 04</span>
+    </section>
+
+    <section class="about scene-section" id="about">
+      <div class="container about__layout">
+        <div class="about__heading reveal">
+          <span class="section-index">01 — GALENITE</span>
+          <h2>СИСТЕМА<br>ДЛЯ РАБОТЫ<span class="dot">.</span></h2>
+        </div>
+        <div class="about__copy reveal">
+          <p class="lead">Galenite разрабатывает цифровые продукты, AI-сервисы и инструменты автоматизации.</p>
+          <p>Мы объединяем рабочие процессы в одной экосистеме: от задач и файлов до управления командой и AI-агентов. Каждый продукт решает свою задачу и может использоваться отдельно.</p>
+          <a class="text-link" href="/products/">Изучить продукты <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature" id="featured">
+      <div class="feature__image"></div>
+      <div class="feature__shade"></div>
+      <div class="container feature__inner">
+        <div class="feature__copy reveal">
+          <p class="section-index">02 — AI OFFICE</p>
+          <h2>AI<br>OFFICE<span class="dot">.</span></h2>
+          <p>Визуальный интерфейс для работы с AI-командой: задачи, роли, маршруты выполнения и статусы в одном пространстве.</p>
+          <a class="cta cta--light" href="/ai-office/">Посмотреть AI Office <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="feature__detail reveal" aria-hidden="true"><span>GALENITE</span><strong>02</strong><span>PRODUCT / AI OFFICE</span></div>
+      </div>
+    </section>
+
+    <section class="products scene-section" id="ecosystem">
+      <div class="container">
+        <div class="products__intro reveal">
+          <div><span class="section-index">03 — ЭКОСИСТЕМА</span><h2>ПРОДУКТЫ<br>GALENITE<span class="dot">.</span></h2></div>
+          <p>Разные инструменты. Единый подход к интерфейсу и работе с данными.</p>
+        </div>
+        <div class="product-list">
+          <a href="/galen/" class="product-row reveal">
+            <span class="product-row__number">01</span>
+            <div class="product-row__body"><h3>GALEN</h3><p>Чат-интерфейс для задач и работы с AI.</p></div>
+            <span class="product-row__arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="/ai-office/" class="product-row reveal">
+            <span class="product-row__number">02</span>
+            <div class="product-row__body"><h3>AI OFFICE</h3><p>Рабочая среда для AI-команды.</p></div>
+            <span class="product-row__arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="/products/" class="product-row reveal">
+            <span class="product-row__number">03</span>
+            <div class="product-row__body"><h3>ВСЕ ПРОДУКТЫ</h3><p>Инструменты Galenite и направления разработки.</p></div>
+            <span class="product-row__arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="ending" id="contact">
+      <div class="ending__photo"></div>
+      <div class="ending__shade"></div>
+      <div class="container ending__content reveal">
+        <span class="section-index">04 — КОНТАКТЫ</span>
+        <h2>ОБСУДИМ<br>ВАШ ПРОЕКТ<span class="dot">.</span></h2>
+        <p>Разработка AI-сервисов, интеграции, автоматизация и цифровые продукты для бизнеса.</p>
+        <a class="cta cta--light" href="/contact/">Связаться с Galenite <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="/" class="footer__brand">GALENITE <span>VI EDITION</span></a>
+      <div><a href="/products/">Продукты</a><a href="/contact/">Контакты</a><a href="/auth/">Вход</a></div>
+      <p>© 2026 Galenite. Тематическое оформление; не связано с Rockstar Games.</p>
+    </div>
+  </footer>
 </body>
 </html>
