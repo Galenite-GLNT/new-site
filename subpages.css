@@ -1,6 +1,6 @@
 .interior{background:#f7e8df;color:#352a38;min-height:100vh}
 .interior .header{background:rgba(30,23,41,.74);backdrop-filter:blur(18px)}
-.interior .header__brand,.interior .header__nav a{color:#fff}
+.interior .header__brand,.interior .header__nav a,.interior .header__action{color:#fff}
 .interior .inner-hero{min-height:76svh;display:flex;align-items:end;position:relative;background:#885374;overflow:hidden;color:#fff}
 .interior .inner-hero__photo{position:absolute;inset:0;background-image:url('/assets/vi/wallpaper.webp'),url('/assets/vi/sunset.svg');background-size:cover;background-position:center}
 .interior .inner-hero__photo:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(34,24,48,.72),rgba(34,24,48,.15) 52%),linear-gradient(90deg,rgba(42,29,58,.4),transparent)}
